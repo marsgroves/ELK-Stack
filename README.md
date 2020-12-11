@@ -17,5 +17,5 @@ This project was deployed in an Azure cloud environment. This ELK stack monitore
 
 Immediately created a network security group that by default blocked ALL traffic to protect the environment as it was built. The NSG is subsequently modified to allow specific traffic as the infrastructure is built.
 
-![Cloud Diagram](images/Cloud-Network.png)
+![Cloud Diagram](images/CloudNetwork.png)
 
