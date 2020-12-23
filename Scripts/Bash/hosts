@@ -1,0 +1,13 @@
+## /etc/hosts file
+
+127.0.0.1       localhost
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+172.17.0.2      25bc6f626e7f
+
+10.1.0.5        Web-1 web-1
+10.1.0.6        Web-2 web-2
+10.2.0.4        ELK-SERVER elk-server

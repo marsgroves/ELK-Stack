@@ -1,0 +1,26 @@
+---
+- name: Install heartbeat
+  hosts: webservers
+  become: true
+  tasks:
+    # Use command module
+  - name: Download heartbeat
+    command: curl -L -O https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-7.6.1-amd64.deb
+
+    # Use command module
+  - name: install heartbeat
+    command: dpkg -i heartbeat-7.6.1-amd64.deb
+
+    # Use copy module
+  - name: drop in heartbeat config
+    copy:
+      src: /etc/ansible/files/heartbeat-config.yml
+      dest: /etc/heartbeat/heartbeat.yml
+
+    # Use command module
+  - name: setup metric beat
+    command: heartbeat setup
+
+    # Use command module
+  - name: heartbeat setup
+    command: service heartbeat-elastic start
